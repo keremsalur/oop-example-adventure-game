@@ -68,14 +68,17 @@ public class Player {
         System.out.println("----------------------------------------------------");
         System.out.println("Characters");
         for (GameChar character : characters)
-            System.out.println("Name: "+character.getName()+
-                    "\t Damage: "+character.getDamage()+
-                    "\tHealth: "+character.getHealth()+
+            System.out.println(
+                    "Id: " +character.getId() +
+                    "\tName: "+character.getName() +
+                    "\tDamage: "+character.getDamage() +
+                    "\tHealth: "+character.getHealth() +
                     "\tMoney: "+character.getMoney());
         System.out.println("----------------------------------------------------");
         int choice = 0;
         do {
-            System.out.println("Please make your choice [1,2,3]: ");
+            System.out.println("Toplam : " + GameChar.getCountOfCharacter());
+            System.out.println("Please make your choice for character id: ");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -91,7 +94,7 @@ public class Player {
                     System.out.println("Please choice 1 or 2 or 3!");
                     break;
             }
-        }while (choice != 1 && choice != 2 && choice != 3);
+        }while (choice < 0 || choice > GameChar.getCountOfCharacter());
         System.out.println("You are " + this.getCharName() + "!");
     }
 

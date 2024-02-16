@@ -1,5 +1,5 @@
 public class Archer extends GameChar{
     public Archer() {
-        super("Archer", 7, 18, 20);
+        super(1,"Archer", 7, 18, 20);
     }
 }

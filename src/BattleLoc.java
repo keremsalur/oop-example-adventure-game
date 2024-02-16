@@ -1,16 +1,14 @@
 public abstract class BattleLoc extends Location{
-    private Obstacle obstacle;
+    private Obstacle[] obstacles;
 
-    public BattleLoc(Obstacle o){
-
+    public BattleLoc(Obstacle[] o){
+        this.obstacles = o;
     }
 
-    public Obstacle getObstacle() {
-        return obstacle;
-    }
+    public Obstacle[] getObstacle() {return obstacles;}
 
-    public void setObstacle(Obstacle obstacle) {
-        this.obstacle = obstacle;
+    public void setObstacle(Obstacle[] obstacles) {
+        this.obstacles = obstacles;
     }
 
     public void combat(){

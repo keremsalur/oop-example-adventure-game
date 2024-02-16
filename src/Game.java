@@ -30,4 +30,9 @@ public class Game {
         System.out.println("Please select your character: ");
         player1.selectChar();
     }
+    public void createMap(){
+        Location[] locations = {
+
+        };
+    }
 }

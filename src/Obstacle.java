@@ -1,13 +1,11 @@
 public abstract class Obstacle {
     private int obstacleId;
-    private int obstacleNumber;
     private int damage;
     private int health;
     private int money;
 
-    public Obstacle(int obstacleId, int obstacleNumber, int damage, int health, int money) {
+    public Obstacle(int obstacleId, int damage, int health, int money) {
         this.obstacleId = obstacleId;
-        this.obstacleNumber = obstacleNumber;
         this.damage = damage;
         this.health = health;
         this.money = money;
@@ -16,43 +14,27 @@ public abstract class Obstacle {
     public int getDamage() {
         return damage;
     }
-
     public void setDamage(int damage) {
         this.damage = damage;
     }
-
     public int getHealth() {
         return health;
     }
-
     public void setHealth(int health) {
         this.health = health;
     }
-
     public int getMoney() {
         return money;
     }
-
     public void setMoney(int money) {
         this.money = money;
     }
-
     public int getObstacleId() {
         return obstacleId;
     }
-
     public void setObstacleId(int obstacleId) {
         this.obstacleId = obstacleId;
     }
-
-    public int getObstacleNumber() {
-        return obstacleNumber;
-    }
-
-    public void setObstacleNumber(int obstacleNumber) {
-        this.obstacleNumber = obstacleNumber;
-    }
-
     public boolean onLive(){
         return this.getHealth() > 0;
     }

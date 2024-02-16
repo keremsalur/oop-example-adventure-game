@@ -1,5 +1,5 @@
 public class Zombie extends Obstacle{
-    public Zombie(int obstacleId, int obstacleNumber, int damage, int health, int money) {
-        super(obstacleId, obstacleNumber, damage, health, money);
+    public Zombie(int obstacleId, int damage, int health, int money) {
+        super(obstacleId, damage, health, money);
     }
 }
